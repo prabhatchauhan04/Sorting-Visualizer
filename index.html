@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">Sorting Visualizer</div>
+    <div class="options-box">
+        <select class="dropdown" name="Algorithms-choice" id="algo-choice">
+            <option value="">Choose Algorithm</option>
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+        </select>
+        <select class="dropdown" name="Array-Size-choice" id="size-choice">
+            <option value="">Array Size</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
+        </select>
+        <select class="dropdown" name="Speed-choice" id="speed-choice">
+            <option value="">Speed</option>
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="4">4x</option>
+            <option value="8">8x</option>
+            <option value="16">16x</option>
+        </select>
+        <button class="btn" id="generate-array">Generate Array</button>
+        <button class="btn" id="sort">Sort</button>
+    </div>
+    <div class="description-box">
+        <p id="description">
+            This visualizer shows how sorting algorithms organize data step by step.
+            Each bar represents a value, and its height indicates its size.
+            Select a sorting algorithm, adjust the array size and speed, and watch the magic unfold!
+        </p>
+    </div>
+    <div id="overlay"
+        style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index:1000;">
+    </div>
+    <!-- The custom alert box -->
+    <div id="custom-alert"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#ffbb33; color:black; padding:20px 30px; border-radius:15px; z-index:1001; text-align:center; min-width:250px; font-weight:bold;">
+        Please select an array size before generating!
+        <br><br>
+        <button id="close-alert"
+            style="padding:8px 16px; border:none; border-radius:10px; background:black; color:#ffbb33; cursor:pointer;">OK</button>
+    </div>
+    <div id="overlay-sort"
+        style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index:1000;">
+    </div>
+
+    <div id="custom-alert-sort"
+        style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%);
+    background:#ffbb33; color:black; padding:20px 30px; border-radius:15px; z-index:1001; text-align:center; min-width:250px; font-weight:bold;">
+        Please select algorithm, array size, and speed before sorting!
+        <br><br>
+        <button id="close-alert-sort"
+            style="padding:8px 16px; border:none; border-radius:10px; background:black; color:#ffbb33; cursor:pointer;">OK</button>
+    </div>
+
+    <!-- The array box where the bars will be displayed -->
+    <div class="array-box">
+
+    </div>
+    <div class="footer">
+        <a href="https://github.com/prabhatchauhan04/">
+            <img class="icon" id="git-icon" src="./assets/social-removebg-preview.png" alt="">
+        </a>
+        <a
+            href="https://www.linkedin.com/in/prabhat-chauhan-624268319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+            <img class="icon" id="linkedin-icon" src="./assets/linkedin-removebg-preview.png" alt="">
+        </a>
+        <a href="https://leetcode.com/u/prabhatchauhan04/">
+            <img class="icon" src="./assets/icons8-leetcode-96-removebg-preview.png" alt="">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
