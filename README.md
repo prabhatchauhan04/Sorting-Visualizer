@@ -6,7 +6,7 @@ A dynamic and interactive web-based **Sorting Algorithm Visualizer** built using
 
 ## 🚀 Live Demo
 
-*  *
+* https://prabhatchauhan04.github.io/Sorting-Visualizer/ *
 
 ---
 
